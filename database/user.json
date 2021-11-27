@@ -1,0 +1,13 @@
+{
+    "name": "ilkhom",
+    "profession": "software engineer",
+    "age": 26,
+    "residence": "S.Korea",
+    "adress": "S.Korea, Busan",
+    "languages": "Korean,English,Uzbek",
+    "skills": "HTML,CSS,JS,NodeJS,Python",
+    "extra_skills": "",
+    "work_place": "Somyon station",
+    "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum",
+    "about_me":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus"
+}
