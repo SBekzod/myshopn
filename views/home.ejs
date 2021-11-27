@@ -11,15 +11,46 @@
 
 <body>
     <div class="frame">
-        <div class="main_frame"> 
-            <div class="left_frame">1</div>
-            <div class="midd_frame">
-                <div class="midd_top">2.1</div>
-                <div class="midd_bot">2.2</div>
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="lf_profile">
+                    <div class="lf_image">
+                        <img src="<%=user.url%>" width="156" height="142" />
+                    </div>
+                    <div class="lf_user_name">
+                        <%=user.name%>
+                    </div>
+                    <div class="lf_profession">
+                        <%=user.profession%>
+                    </div>
+                    <div class="lf_panel">
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+
+                <div class="lf_line"></div>
+                <div class="lf_information">1.2</div>
+                <div class="lf_line"></div>
+                <div class="lf_languages">1.3</div>
+                <div class="lf_line"></div>
+                <div class="lf_skills">1.4</div>
+                <div class="lf_line"></div>
+                <div class="lf_ExtraSkills"></div>
+                <div class="lf_line"></div>
             </div>
-            <div class="right_frame">3</div>
-        </div> 
+        </div>
+        <div class="midd_frame">
+            <div class="midd_top">2.1</div>
+            <div class="midd_bot">2.2</div>
+        </div>
+        <div class="right_frame">3</div>
+    </div>
     </div>
 </body>
 
-</html>    
+</html>
