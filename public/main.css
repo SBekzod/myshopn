@@ -64,7 +64,6 @@
     height: 267px;
     margin-left: 40px;
     margin-top: 50px;
-    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,7 +178,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(206, 188, 119);
 }
 
 .icon {
