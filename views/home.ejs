@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MYSHOP</title>
     <link rel="stylesheet" href="/main.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </head>
@@ -51,23 +52,166 @@
                 </div>
 
                 <div class="lf_line"></div>
-                <div class="lf_information">1.2</div>
+
+                <div class="lf_information">
+                    <div class="abs">
+                        <div class="age"> Age:</div>
+                        <div class="age1">
+                            <%=user.age%>
+                        </div>
+                    </div>
+                    <div class="abs">
+                        <div class="Residence"> Residence:</div>
+                        <div class="Residence1">
+                            <%=user.residence%>
+                        </div>
+                    </div>
+                    <div class="abs">
+                        <div class="adress"> Adress:</div>
+                        <address class="adress1">
+                            <a target="blank" href="http://naver.me/xk6Q4Bwn"> 
+                                <%=user.adress%></a> <br>
+                    </address>
+                    </div>
+
+                </div>
                 <div class="lf_line"></div>
-                <div class="lf_languages">1.3</div>
+
+                <div class="lf_languages">
+                    <div class="languages"> Languages</div>
+
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[0]%>
+                        </div>
+                        <div class="foyiz">95%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle1"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[1]%>
+                        </div>
+                        <div class="foyiz">50%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle2"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[2]%>
+                        </div>
+                        <div class="foyiz">30%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle3"></div>
+                    </div>
+                </div>
                 <div class="lf_line"></div>
-                <div class="lf_skills">1.4</div>
+
+                <div class="lf_skills">
+                    <div class="languages"> Languages</div>
+
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[0]%>
+                        </div>
+                        <div class="foyiz">50%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[1]%>
+                        </div>
+                        <div class="foyiz">40%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle1"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[2]%>
+                        </div>
+                        <div class="foyiz">30%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle2"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[3]%>
+                        </div>
+                        <div class="foyiz">20%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle3"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[4]%>
+                        </div>
+                        <div class="foyiz">10%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle4"></div>
+                    </div>
+                </div>
                 <div class="lf_line"></div>
-                <div class="lf_ExtraSkills"> </div>
+
+                <div class="lf_ExtraSkills">
+                    <div class="languages"> Extra Skills </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[0]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[1]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[2]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[3]%>
+                        </div>
+                    </div>
+                </div>
                 <div class="lf_line"></div>
             </div>
         </div>
+
         <div class="midd_frame">
             <div class="midd_top">2.1</div>
             <div class="midd_bot">2.2</div>
         </div>
         <div class="right_frame">3</div>
     </div>
-    </div>
+    <!-- </div> -->
+
 </body>
 
 </html>
