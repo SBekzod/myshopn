@@ -199,10 +199,6 @@
         right: 27.08%;
         margin-right: 9.46px;
         margin-top: 5.86px;
-        /* display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center; */
     }
     
     .abs {
@@ -738,29 +734,11 @@
     
     .middicon {
         position: relative;
-        /* width: 68px;
-        height: 68px; */
         margin-bottom: 33.44px;
-        /* margin-top: 28px;
-    margin-left: 121px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     }
     
     .middtext {
-        /* position: relative;
-        width: 158px;
-        height: 22px; */
         margin-bottom: 15px;
-        /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-        /* margin-top: 33.44px; */
-        /* margin-top: 122px; */
-        /* H4 - 18px */
         font-family: Inter;
         font-style: normal;
         font-weight: 500;
@@ -774,8 +752,6 @@
     
     .middtext1 {
         position: relative;
-        /* width: 134px;
-        height: 24px; */
         font-family: Inter;
         font-style: normal;
         font-weight: normal;
@@ -798,4 +774,49 @@
         font-size: 12px;
         line-height: 14px;
         color: #FFB400;
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .ringht1 {
+        position: relative;
+        margin-top: 52px;
+    }
+    
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 215px;
+    }
+    
+    .ringht3 {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: #FFB400;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ringht2 {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: #F0F0F6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        margin-top: 43px;
     }
