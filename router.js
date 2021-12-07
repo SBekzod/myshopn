@@ -24,9 +24,9 @@ router.get("/project", (req, res) => {
 
     res.render("project", { user: user });
 });
-router.get("/shop", (req, res) => {
-    console.log("/shop");
-    res.end("you are in our shop page");
+router.get("/contact", (req, res) => {
+
+    res.render("contact", { user: user });
 });
 
 module.exports = router;
