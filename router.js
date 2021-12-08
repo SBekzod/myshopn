@@ -28,5 +28,11 @@ router.get("/contact", (req, res) => {
 
     res.render("contact", { user: user });
 });
+router.post("/call-me", (req, res) => {
+    console.log(`req.body ::: `, req.body);
+    const data = req.body;
+    fs.writeFileSync("database/contact_request.json", JSON.stringify(data));
+    res.json({ state: "success" });
+});
 
 module.exports = router;

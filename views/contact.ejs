@@ -8,6 +8,7 @@
     <title>My Third Project</title>
     <link rel="stylesheet" href="/contact.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -15,13 +16,14 @@
         <h2>Contact Me</h2>
         <form>
             <div class="user-box">
-                <input type="password" name="" required="">
-                <label>Password</label>
+                <input id="username" type="text" name="" required="">
+                <label>Username</label>
             </div>
             <div class="user-box">
-                <input type="text" name="" required="">
-                <label>Name</label>
+                <input id="password" type="password" name="" required="">
+                <label>Password</label>
             </div>
+
 
             <div class="user-box">
                 <input type="number" name="" required="">
@@ -41,14 +43,16 @@
                         <input type="text" name="" required="">
                         <label></label>
                     </div>
-                    <a href="#">
+                    <a id="submit" href="#">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span> Submit
                     </a>
+
         </form>
         </div>
+        <script src="/main-bundled.js"></script>
 </body>
 
 </html>
