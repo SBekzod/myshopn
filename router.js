@@ -13,17 +13,14 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 router.get("/", (req, res) => {
-    console.log("/");
-    res.end("you are connected");
-});
-router.get("/home", (req, res) => {
-
-    res.render("home", { user: user });
-});
-router.get("/project", (req, res) => {
 
     res.render("project", { user: user });
 });
+
+router.get("/home", (req, res) => {
+    res.render("home", { user: user });
+});
+
 router.get("/contact", (req, res) => {
 
     res.render("contact", { user: user });

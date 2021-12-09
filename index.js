@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 app.use("/", router);
 
 const server = http.createServer(app);
-const port = 3003;
-server.listen(port, function () {
-  console.log("Your server is running on port: ", port);
+const port = process.env.PORT || 3003;
+server.listen(port, function() {
+    console.log("Your server is running on port: ", port);
 });
