@@ -5,21 +5,306 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My First Project</title>
     <link rel="stylesheet" href="/main.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </head>
 
+
 <body>
     <div class="frame">
-        <div class="main_frame"> 
-            <div class="left_frame">1</div>
-            <div class="midd_frame">
-                <div class="midd_top">2.1</div>
-                <div class="midd_bot">2.2</div>
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="lf_profile">
+                    <div class="lf_image">
+                        <img src="https://i.ibb.co/SRqtN2h/photo-2021-11-27-17-43-43.jpg" width="156" height="142" />
+                    </div>
+                    <div class="lf_user_name">
+                        <%=user.name%>
+                    </div>
+                    <div class="lf_profession">
+                        <%=user.profession%>
+                    </div>
+                    <div class="lf_panel">
+                        <div class="icon">
+                            <img src="assets/home/vector.svg" class="icon1">
+                        </div>
+
+                        <div class="icon">
+                            <img src="assets/home/vector-1.svg" class="icon1">
+                        </div>
+
+                        <div class="icon">
+                            <img src="assets/home/vector-2.svg" class="icon1">
+                        </div>
+
+                        <div class="icon">
+                            <img src="assets/home/vector-3.svg" class="icon1">
+                        </div>
+
+                        <div class="icon">
+                            <img src="assets/home/vector-4.svg" class="icon1">
+                        </div>
+
+                        <div class="icon">
+                            <img src="assets/home/vector-5.svg" class="icon1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lf_line"></div>
+
+                <div class="lf_information">
+                    <div class="abs">
+                        <div class="age"> Age:</div>
+                        <div class="age1">
+                            <%=user.age%>
+                        </div>
+                    </div>
+                    <div class="abs">
+                        <div class="Residence"> Residence:</div>
+                        <div class="Residence1">
+                            <%=user.residence%>
+                        </div>
+                    </div>
+                    <div class="abs">
+                        <div class="adress"> Adress:</div>
+                        <address class="adress1">
+                            <a target="blank" href="http://naver.me/xk6Q4Bwn"> 
+                                <%=user.adress%></a> <br>
+                    </address>
+                    </div>
+
+                </div>
+                <div class="lf_line"></div>
+
+                <div class="lf_languages">
+                    <div class="languages"> Languages</div>
+
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[0]%>
+                        </div>
+                        <div class="foyiz">95%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle1"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[1]%>
+                        </div>
+                        <div class="foyiz">50%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle2"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.languages[2]%>
+                        </div>
+                        <div class="foyiz">30%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Rectangle3"></div>
+                    </div>
+                </div>
+                <div class="lf_line"></div>
+
+                <div class="lf_skills">
+                    <div class="languages"> Languages</div>
+
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[0]%>
+                        </div>
+                        <div class="foyiz">50%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[1]%>
+                        </div>
+                        <div class="foyiz">40%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle1"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[2]%>
+                        </div>
+                        <div class="foyiz">30%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle2"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[3]%>
+                        </div>
+                        <div class="foyiz">20%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle3"></div>
+                    </div>
+                    <div class="uzb1">
+                        <div class="uzb">
+                            <%=user.skills[4]%>
+                        </div>
+                        <div class="foyiz">10%</div>
+                    </div>
+                    <div class="Rectangle">
+                        <div class="Srectangle4"></div>
+                    </div>
+                </div>
+                <div class="lf_line"></div>
+
+                <div class="lf_ExtraSkills">
+                    <div class="languages"> Extra Skills </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[0]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[1]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[2]%>
+                        </div>
+                    </div>
+                    <div class="texst">
+                        <div class="burchak">
+                            <div class="burchak1"></div>
+                            <div class="burchak2"></div>
+                        </div>
+                        <div class="texst1">
+                            <%=user.extra_skills[3]%>
+                        </div>
+                    </div>
+                </div>
+                <div class="lf_line"></div>
             </div>
-            <div class="right_frame">3</div>
-        </div> 
+        </div>
+        <!-- lf_fram completion -->
+
+        <div class="midd_frame">
+            <!-- midd_top start -->
+            <div class="midd_top">
+                <div class="top">
+                    <div class="ilkhom">
+                        <%=user.work_place%>
+                    </div>
+                    <div class="ilkhom1">
+                        <%=user.about_me%>
+                    </div>
+                    <div class="novbar"> HIRE MY
+                        <img src="assets/home/vector6.svg" class="novicon">
+                    </div>
+                </div>
+                <div class="myimg1"><img src="assets/home/vector7.png"></div>
+                <div class="topicon"><img src="assets/home/Elli.svg"></div>
+                <div class="topicon1"><img src="assets/home/Elli1.svg"></div>
+                <div class="topicon2"><img src="assets/home/Elli2.svg"></div>
+                <div class="topicon3"><img src="assets/home/Elli3.svg"></div>
+                <div class="topicon4"><img src="assets/home/Elli4.svg"></div>
+                <div class="topicon5"><img src="assets/home/Elli5.svg"></div>
+                <div class="topicon6"><img src="assets/home/Elli6.svg"></div>
+            </div>
+            <div class="midd_bot">
+                <div class="myservices">My Services</div>
+                <div class="desc">
+                    <%=user.service_desc%>
+                </div>
+                <div class="angle">
+                    <div class="middrectangle">
+                        <div class="bot">
+                            <div class="middicon"><img src="assets/home/Group.svg"></div>
+                            <div class="middtext">web development</div>
+                            <div class="middtext1">blog, e-commerce</div>
+                        </div>
+                    </div>
+                    <div class="middrectangle">
+                        <div class="bot">
+                            <div class="middicon"><img src="assets/home/illustr.svg"></div>
+                            <div class="middtext">UI/UX Design</div>
+                            <div class="middtext1">Mobile App, Website Design</div>
+                        </div>
+                    </div>
+                    <div class="middrectangle">
+                        <div class="bot">
+                            <div class="middicon"><img src="assets/home/Micro.svg"></div>
+                            <div class="middtext">sound design</div>
+                            <div class="middtext1">Voice Over, Beat Making</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="angle">
+                    <div class="middrectangle">
+                        <div class="bot">
+                            <div class="middicon"><img src="assets/home/game.svg"></div>
+                            <div class="middtext">game design</div>
+                            <div class="middtext1">Character Design, Props</div>
+                        </div>
+                    </div>
+                    <div class="middrectangle">
+                        <div class="bot">
+                            <div class="middicon"><img src="assets/home/Photo.svg"></div>
+                            <div class="middtext">photography</div>
+                            <div class="middtext1"> portrait, product photography</div>
+                        </div>
+                    </div>
+                    <div class="middrectangle">
+                        <div class="bot">
+
+                            <div class="middtext">advertising</div>
+                            <div class="middtext1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</div>
+                            <div class="orderr"><img src="assets/home/Order.svg"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="right_frame">
+            <div class="box">
+                <div class="ringht1"><img src="assets/home/Vector-16.svg"></div>
+            </div>
+            <div class="box1">
+                <div class="ringht3"><img src="assets/home/Vector-12.svg"></div>
+                <div class="ringht2"><img src="assets/home/Vector-17.svg"></div>
+                <div class="ringht2"><img src="assets/home/Vector-18.svg"></div>
+                <div class="ringht2"><img src="assets/home/Vector-13.svg"></div>
+                <div class="ringht2"><img src="assets/home/Vector-14.svg"></div>
+                <div class="ringht2"><img src="assets/home/Vector-15.svg"></div>
+            </div>
+        </div>
     </div>
+
+    <!-- <script src="/main-bundled.js"></script> -->
+
 </body>
 
-</html>    
+</html>
