@@ -27,7 +27,7 @@ body {
     width: 1169.34px;
     height: 58px;
     margin-top: 55px;
-    margin-left: 135.66px;
+    margin-left: 80px;
     display: flex;
 }
 
@@ -39,10 +39,32 @@ body {
     margin-top: 19.29px;
 }
 
+.loginn-box form a {
+    position: relative;
+    display: inline-block;
+    /* padding: 10px 20px; */
+    /* color: #03e9f4; */
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    /* margin-top: 40px; */
+    /* letter-spacing: 4px */
+}
+
+.loginn-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
 .gpt {
     position: relative;
-    width: 62.56px;
-    height: 16.02px;
+    width: 100px;
+    height: 25px;
     display: flex;
     justify-content: flex-start;
 }
@@ -54,7 +76,7 @@ body {
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     /* identical to box height */
     color: #FFFFFF;

@@ -5,7 +5,12 @@ $(function() {
     $("#singin").on("click", () => {
         console.log("click");
         // window.open("google.com.")
-        OpenPopupCenter("/contact", "my shop", 1000, 600)
+        OpenPopupCenter("/contact", "my shop", 1000, 600);
+
+        $("#library").on("click", () => {
+            console.log("click");
+            OpenPopupCenter("/home", "", 1300, 2000)
+        });
     });
 
 
@@ -13,9 +18,20 @@ $(function() {
         console.log("click");
         const username = $("#username").val();
         const password = $("#password").val();
+
+        const age = $("#age").val();
+        const adress = $("#adess").val();
+        const place = $("#place").val();
+
+
         const params = {
             username: username,
-            password: password
+            password: password,
+            age: age,
+            adress: adress,
+            place: place
+
+
         }
         console.log(params)
         $.post(
