@@ -29,19 +29,18 @@ $(function () {
       password: password,
     };
     console.log(params);
-    alert("BUB");
-    // $.post(
-    //     "/call-me",
-    //     params,
-    //     (data) => {
-    //         console.log("data :", data);
-    //         window.opener.location.reload();
-    //         window.close();
-    //     },
-    //     "JSON"
-    // ).fail((err) => {
-    //     console.log("ERROR ::: ", err);
-    // });
+    $.post(
+      "/call-me",
+      params,
+      (data) => {
+        console.log("data :", data);
+        window.opener.location.reload();
+        window.close();
+      },
+      "JSON"
+    ).fail((err) => {
+      console.log("ERROR ::: ", err);
+    });
   });
 });
 

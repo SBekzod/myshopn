@@ -1,33 +1,12 @@
 const fs = require("fs");
 const express = require("express");
+const userControllers = require("./controllers/userController");
 const router = express.Router();
 
-// create data for our server
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-  if (err) {
-    console.log("ERROR: ", err);
-  } else {
-    user = JSON.parse(data);
-  }
-});
-
-router.get("/", (req, res) => {
-  res.render("project", { user: user });
-});
-
-router.get("/home", (req, res) => {
-  res.render("home", { user: user });
-});
-
-router.get("/contact", (req, res) => {
-  res.render("contact", { user: user });
-});
-router.post("/call-me", (req, res) => {
-  console.log(`req.body ::: `, req.body);
-  const data = req.body;
-  fs.writeFileSync("database/contact_request.json", JSON.stringify(data));
-  res.json({ state: "success" });
-});
+// USER CONTROLLERS
+router.get("/", userControllers.getUserMainData);
+router.get("/home", userControllers.getHomeData);
+router.get("/contact", userControllers.getContactData);
+router.post("/call-me", userControllers.postCotrollerData);
 
 module.exports = router;
