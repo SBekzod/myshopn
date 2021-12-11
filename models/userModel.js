@@ -21,9 +21,22 @@ class UserModel {
             const new_user = await this.db.createNewUser(data);
             return new_user;
         } catch (err) {
-
+            console.log('ERROR ::: createNewUserDataMethod');
+            throw err;
         }
     }
+
+    async getLogInMethod(data) {
+        try {
+            const user_data = await this.db.searchUserCredentials(data);
+            if (user_data) return user_data;
+            else return null;
+        } catch (err) {
+            console.log('ERROR ::: getLogInMethod');
+            throw err;
+        }
+    }
+
 
     onDelay() {
         return new Promise((resolve, reject) => {

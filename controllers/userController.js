@@ -41,15 +41,64 @@ userControllers.createNewUserData = async (req, res) => {
 };
 
 userControllers.getLogout = (req, res) => {
+    console.log("controller: getLogout");
     res.cookie('myShopUser', null, {maxAge: 0, httpOnly: false});
     res.end('You have been logged out');
 };
+
+userControllers.getLogIn = async (req, res) => {
+    try {
+        console.log("controller: getLogIn");
+        const user = new UserModel();
+        const user_data = await user.getLogInMethod(req.body);
+        if(user_data) {
+            delete user_data.password;
+            const user_token = createNewTokens(user_data);
+            res.cookie('myShopUser', user_token, {maxAge: 60 * 60 * 1000, httpOnly: false});
+            res.json({state: "success", user: user_data});
+        } else {
+            res.json({state: 'password or name does not match'});
+        }
+    } catch (err) {
+        console.log('ERROR ::: getLogIn');
+        console.log(err);
+        res.json({state: 'something went wrong'});
+    }
+};
+
+userControllers.validateUser = (req, res, next) => {
+    try {
+        let cookie = req.cookies;
+        if (Object.keys(cookie).length == 0 || !cookie.hasOwnProperty('myShopUser')) {
+            res.json({state: 'authentication failed'});
+        } else {
+            const user_token = cookie['myShopUser'];
+            const decoded_data = jwt.verify(user_token, secret);
+            console.log('decoded_data', decoded_data);
+            if (!decoded_data.hasOwnProperty('name')) {
+                req.verifiedUser = decoded_data;
+                next();
+            } else {
+                throw new Error('Hacking state');
+            }
+        }
+    } catch (err) {
+        console.log('ERROR ::: cont.validateUser')
+        console.log(err);
+        res.json({state: 'something went wrong'})
+    }
+};
+
+userControllers.getUsersOnlyData = (req, res) => {
+    res.json({state: 'success', username: req.verifiedUser.name});
+};
+
 
 const createNewTokens = (user_data) => {
     console.log(`THIS IS THE REQ DATA : ${user_data}`);
     const token = jwt.sign({
         data: user_data
-    }, secret, { expiresIn: 60 * 60 });
+    }, secret, {expiresIn: 60 * 60});
     console.log(token);
     return token
 };

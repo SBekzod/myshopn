@@ -26,7 +26,8 @@ class MySql {
             return query_result[0][0];
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR ::: getUsersInfoByName');
+            console.log('ERROR ::: getUsersInfoByName');
+            throw err;
         }
 
     }
@@ -39,7 +40,21 @@ class MySql {
             return query_result[0][0];
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR :::  getUsersInfoById');
+            console.log('ERROR :::  getUsersInfoById');
+            throw err;
+        }
+    }
+
+    async searchUserCredentials(data) {
+        try {
+            if (!this.con) await this.connection();
+            const sql = 'SELECT * FROM users WHERE name = ? and password = SHA(?)';
+            const query_result = await this.con.execute(sql, [data.name, data.password]);
+            return query_result[0][0];
+        } catch (err) {
+            console.log(err);
+            console.log('ERROR :::  getUsersInfoById')
+            throw err;
         }
     }
 
@@ -50,7 +65,8 @@ class MySql {
             return query_result[0];
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR :::  getAllUserData');
+            console.log('ERROR :::  getAllUserData');
+            throw err;
         }
     }
 
@@ -62,7 +78,8 @@ class MySql {
             return query_result[0];
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR ::: deleteUserById');
+            console.log('ERROR ::: deleteUserById');
+            throw err;
         }
     }
 
@@ -77,7 +94,8 @@ class MySql {
             return query_result[0].insertId;
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR ::: createNewUser');
+            console.log('ERROR ::: createNewUser');
+            throw err;
         }
     }
 
@@ -90,9 +108,12 @@ class MySql {
             return query_result[0];
         } catch (err) {
             console.log(err);
-            throw new Error('ERROR ::: updateUserData');
+            console.log('ERROR ::: updateUserData');
+            throw err;
         }
     }
+
+
 
 }
 

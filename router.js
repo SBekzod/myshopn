@@ -8,6 +8,8 @@ router.get("/", userControllers.getAllUsersData);
 router.get("/create", userControllers.prepareNewUserData);
 router.post("/signUp", userControllers.createNewUserData);
 router.get("/logout", userControllers.getLogout);
+router.post("/login", userControllers.getLogIn);
+router.get('/only-verified', userControllers.validateUser, userControllers.getUsersOnlyData);
 
 
 // AUTHOR CONTROLLERS
