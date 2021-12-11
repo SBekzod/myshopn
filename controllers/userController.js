@@ -6,7 +6,8 @@ userControllers.getAllUsersData = async (req, res) => {
       console.log("controller: getAllUsersData");
       const user = new UserModel();
       const data = await user.getAllUsersDataMethod();
-      res.json(data);
+      // res.json(data);
+        res.render('project');
     } catch (err) {
       console.log('ERROR ::: cont.getAllUsersData')
       console.log(err);

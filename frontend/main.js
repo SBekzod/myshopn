@@ -5,7 +5,7 @@ $(function () {
   $("#singin").on("click", () => {
     console.log("click");
     // window.open("google.com.")
-    OpenPopupCenter("/contact", "my shop", 1000, 600);
+    OpenPopupCenter("/create", "my shop", 1000, 600);
 
     $("#library").on("click", () => {
       console.log("click");
@@ -22,15 +22,15 @@ $(function () {
     const password = $("#password").val();
 
     const params = {
-      username: username,
+      name: username,
       profession: profession,
       age: age,
-      adress: adress,
+      address: adress,
       password: password,
     };
     console.log(params);
     $.post(
-      "/call-me",
+      "/signUp",
       params,
       (data) => {
         console.log("data :", data);
