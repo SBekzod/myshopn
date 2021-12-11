@@ -40,6 +40,11 @@ userControllers.createNewUserData = async (req, res) => {
 
 };
 
+userControllers.getLogout = (req, res) => {
+    res.cookie('myShopUser', null, {maxAge: 0, httpOnly: false});
+    res.end('You have been logged out');
+};
+
 const createNewTokens = (user_data) => {
     console.log(`THIS IS THE REQ DATA : ${user_data}`);
     const token = jwt.sign({
