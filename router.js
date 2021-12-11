@@ -5,8 +5,11 @@ const router = express.Router();
 
 // USER CONTROLLERS
 router.get("/", userControllers.getUserMainData);
-router.get("/author", userControllers.getAuthorData);
 router.get("/contact", userControllers.getContactData);
 router.post("/call-me", userControllers.postControllerData);
+
+
+// AUTHOR CONTROLLERS
+// router.get("/author", userControllers.getAuthorData);
 
 module.exports = router;

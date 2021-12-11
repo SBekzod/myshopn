@@ -14,13 +14,6 @@ userControllers.getUserMainData = async (req, res) => {
     }
 };
 
-userControllers.getAuthorData = (req, res) => {
-    console.log("controller: getAuthorData");
-    const user = new UserModel();
-    const data = user.getAuthorDataMethod();
-    res.json(data);
-};
-
 userControllers.getContactData = (req, res) => {
     console.log("controller: getContactData");
     const user = new UserModel();
@@ -36,3 +29,13 @@ userControllers.postControllerData = (req, res) => {
         data = user.postControllerData(req_data);
     res.json({state: "success", data: data});
 };
+
+
+
+// TODO: Please create Author controllers later
+// userControllers.getAuthorData = (req, res) => {
+//     console.log("controller: getAuthorData");
+//     const user = new UserModel();
+//     const data = user.getAuthorDataMethod();
+//     res.json(data);
+// };
