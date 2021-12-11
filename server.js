@@ -3,12 +3,14 @@ const moment = require("moment");
 const express = require("express");
 const router = require("./router");
 const cors = require("cors");
+const cookieParser = require('cookie-parser');
 console.log("The server started at", moment.utc().format());
 
 // build express server
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.static("public"));
 app.use(cors());
 
