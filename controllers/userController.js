@@ -19,13 +19,13 @@ userControllers.prepareNewUserData = (req, res) => {
     res.render('create-process');
 };
 
-userControllers.createNewUserData = (req, res) => {
+userControllers.createNewUserData = async (req, res) => {
     console.log("controller: createNewUserData");
     console.log(`req.body ::: `, req.body);
     const req_data = req.body,
         user = new UserModel(),
-        data = user.createNewUserDataMethod(req_data);
-    res.json({state: "success", data: data});
+        data = await user.createNewUserDataMethod(req_data);
+    res.json({state: "success", insert_id: data});
 };
 
 

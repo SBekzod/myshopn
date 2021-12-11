@@ -6,7 +6,7 @@ class UserModel {
         this.user = null;
     }
 
-    async getAllUsersDataMethod () {
+    async getAllUsersDataMethod() {
         try {
             const users = await this.db.getAllUserData();
             return users;
@@ -16,8 +16,13 @@ class UserModel {
         }
     }
 
-    createNewUserDataMethod () {
-        return null;
+    async createNewUserDataMethod(data) {
+        try {
+            const new_user = await this.db.createNewUser(data);
+            return new_user;
+        } catch (err) {
+
+        }
     }
 
 

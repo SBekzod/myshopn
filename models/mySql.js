@@ -1,4 +1,8 @@
-const mysql = require('mysql2/promise')
+const mysql = require('mysql2/promise');
+
+const moment = require('moment');
+require('moment-timezone');
+moment.tz.setDefault("Asia/Seoul");
 
 class MySql {
     constructor() {
@@ -61,16 +65,16 @@ class MySql {
             throw new Error('ERROR ::: deleteUserById');
         }
     }
- 
+
     async createNewUser(data) {
         try {
             if (!this.con) await this.connection();
-            console.log('user: ', data);
-            const sql = "INSERT INTO users SET id = ?, name = ?, password = ?, profession = ?, age = ?, address = ?";
+            const sql = "INSERT INTO users SET id = UUID(), name = ?, password = SHA(?), profession = ?, age = ?, address = ?, reg_date = ?";
             console.log('sql', sql);
-            const query_result = await this.con.execute(sql, [data.id, data.name, data.password, data.profession, data.age, data.address]);
-            console.log(query_result);
-            return query_result[0];
+            data.reg_date = await moment().format('YYYY-MM-DD HH:mm:ss');
+            console.log('user: ', data);
+            const query_result = await this.con.execute(sql, [data.name, data.password, data.profession, data.age * 1, data.address, data.reg_date]);
+            return query_result[0].insertId;
         } catch (err) {
             console.log(err);
             throw new Error('ERROR ::: createNewUser');
