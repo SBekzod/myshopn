@@ -1,8 +1,6 @@
 let userControllers = module.exports;
 const UserModel = require('../models/userModel');
 const jwt = require('jsonwebtoken');
-const secret = process.env.SECRET_TOKEN;
-
 
 userControllers.getAllUsersData = async (req, res) => {
     try {
@@ -73,7 +71,7 @@ userControllers.validateUser = (req, res, next) => {
             res.json({state: 'authentication failed'});
         } else {
             const user_token = cookie['myShopUser'];
-            const decoded_data = jwt.verify(user_token, secret);
+            const decoded_data = jwt.verify(user_token, process.env.SECRET_TOKEN);
             console.log('decoded_data', decoded_data);
             if (!decoded_data.hasOwnProperty('name')) {
                 req.verifiedUser = decoded_data;
@@ -98,7 +96,7 @@ const createNewTokens = (user_data) => {
     console.log(`THIS IS THE REQ DATA : ${user_data}`);
     const token = jwt.sign({
         data: user_data
-    }, secret, {expiresIn: 60 * 60});
+    }, process.env.SECRET_TOKEN, {expiresIn: 60 * 60});
     console.log(token);
     return token
 };
