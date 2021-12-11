@@ -11,11 +11,11 @@ class MySql {
 
     async connection() {
         this.con = await mysql.createConnection({
-            host: '31.220.109.104',
-            user: 'martindb',
-            password: 'Damir2014@',
-            port: '3306',
-            database: 'ilkhom_myshop'
+            host: process.env.MYSQLHOST,
+            user: process.env.MYSQLUSER,
+            password: process.env.MYSQLPASSWORD,
+            port: process.env.MYSQLPORT,
+            database: process.env.MYSQLDATABASE
         })
     }
 

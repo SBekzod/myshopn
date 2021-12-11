@@ -1,7 +1,7 @@
 let userControllers = module.exports;
 const UserModel = require('../models/userModel');
 const jwt = require('jsonwebtoken');
-const secret = 'drfjgndfklgjdfgkl5565sdfgsdg4sd';
+const secret = process.env.SECRET_TOKEN;
 
 
 userControllers.getAllUsersData = async (req, res) => {

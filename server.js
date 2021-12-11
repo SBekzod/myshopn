@@ -4,7 +4,11 @@ const express = require("express");
 const router = require("./router");
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
-console.log("The server started at", moment.utc().format());
+console.log(`The ${process.env.NODE_ENV} server started at ${moment.utc().format()}`);
+
+const {resolve} = require("path");
+const {config} = require("dotenv");
+config({path: resolve(process.env.NODE_ENV === 'production' ? "./.env.prod" : "./.env.dev")});
 
 // build express server
 const app = express();
@@ -20,7 +24,7 @@ app.set("view engine", "ejs");
 app.use("/", router);
 
 const server = http.createServer(app);
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3000;
 server.listen(port, function() {
     console.log("Your server is running on port: ", port);
 });
