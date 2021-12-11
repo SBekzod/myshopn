@@ -1,33 +1,25 @@
+const MySql = require('./mySql');
 
 class UserModel {
     constructor() {
-        this.user = {name: 'martini'}
-        this.contact_id = "sdafasdfasd";
-        this.contact = null;
+        this.db = new MySql();
+        this.user = null;
     }
 
-    async getUserMainDataMethod () {
+    async getAllUsersDataMethod () {
         try {
-            await this.onDelay();
-            return this.user;
+            const users = await this.db.getAllUserData();
+            return users;
         } catch (err) {
-            console.log('ERROR ::: model.getUserMainDataMethod');
+            console.log('ERROR ::: model.getAllUsersDataMethod');
             throw err;
         }
     }
 
-    getContactDataMethod () {
-        return this.contact_id;
+    createNewUserDataMethod () {
+        return null;
     }
 
-    getAuthorDataMethod() {
-        return this.contact;
-    }
-
-    postControllerData(data) {
-        this.contact = data;
-        return this.contact;
-    }
 
     onDelay() {
         return new Promise((resolve, reject) => {
@@ -36,7 +28,6 @@ class UserModel {
             }, 3000);
         });
     }
-
 
 }
 

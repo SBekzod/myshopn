@@ -4,9 +4,9 @@ const userControllers = require("./controllers/userController");
 const router = express.Router();
 
 // USER CONTROLLERS
-router.get("/", userControllers.getUserMainData);
-router.get("/contact", userControllers.getContactData);
-router.post("/call-me", userControllers.postControllerData);
+router.get("/", userControllers.getAllUsersData);
+router.get("/create", userControllers.prepareNewUserData);
+router.post("/signUp", userControllers.createNewUserData);
 
 
 // AUTHOR CONTROLLERS
