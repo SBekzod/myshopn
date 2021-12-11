@@ -25,7 +25,6 @@ class UserModel {
         }
     }
 
-
     onDelay() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
