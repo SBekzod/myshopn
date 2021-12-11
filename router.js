@@ -5,8 +5,8 @@ const router = express.Router();
 
 // USER CONTROLLERS
 router.get("/", userControllers.getUserMainData);
-router.get("/home", userControllers.getHomeData);
+router.get("/author", userControllers.getAuthorData);
 router.get("/contact", userControllers.getContactData);
-router.post("/call-me", userControllers.postCotrollerData);
+router.post("/call-me", userControllers.postControllerData);
 
 module.exports = router;
